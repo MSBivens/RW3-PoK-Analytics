@@ -4,15 +4,14 @@ import { NFTCard } from "../components/nftCard";
 const Main = () => {
   const [collection, setCollectionAddress] = useState("");
   const [NFTs, setNFTs] = useState([]);
-  const [fetchForCollection, setFetchForCollection] = useState(false);
 
   const fetchNFTsForCollection = async () => {
     if (collection.length) {
       var requestOptions = {
         method: "GET",
       };
-      const api_key = "FN8guMexPXkWry3c8gKxy8nwCb0LZde-";
-      const baseURL = `https://polygon-mumbai.g.alchemy.com/v2/${api_key}/getNFTsForCollection/`;
+      const api_key = "xlUXFMCB2LIjsDpoOuv1RwGywsqTZ9iJ";
+      const baseURL = `https://polygon-mainnet.g.alchemy.com/v2/${api_key}/getNFTsForCollection/`;
       const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`;
       const nfts = await fetch(fetchURL, requestOptions).then((data) =>
         data.json()
