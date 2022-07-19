@@ -3,9 +3,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type": "module"
   },
   "dependencies": {
+    "@alch/alchemy-sdk": "^1.0.8",
     "dotenv": "^16.0.1",
     "next": "latest",
     "react": "18.1.0",
