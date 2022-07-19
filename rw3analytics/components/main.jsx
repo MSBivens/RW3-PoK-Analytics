@@ -10,8 +10,8 @@ const Main = () => {
       var requestOptions = {
         method: "GET",
       };
-      const api_key = "xlUXFMCB2LIjsDpoOuv1RwGywsqTZ9iJ";
-      const baseURL = `https://polygon-mainnet.g.alchemy.com/v2/${api_key}/getNFTsForCollection/`;
+      const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
+      const baseURL = `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}/getNFTsForCollection/`;
       const fetchURL = `${baseURL}?contractAddress=${collection}&withMetadata=${"true"}`;
       const nfts = await fetch(fetchURL, requestOptions).then((data) =>
         data.json()
