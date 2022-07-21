@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Main from "../components/main";
-import Gallery from "../components/gallery";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main />
-      <Gallery />
     </div>
   );
 }
