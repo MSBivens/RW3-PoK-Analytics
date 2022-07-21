@@ -5,7 +5,8 @@ const Main = () => {
     };
     // const token.tokenId = "496";
     const baseURL = `https://api.mintkudos.xyz`;
-    const fetchURL = `${baseURL}/v1/tokens/496/owners`;
+    const limit = "1000";
+    const fetchURL = `${baseURL}/v1/tokens/496/owners/?limit=${limit}`;
     fetch(fetchURL, requestOptions)
       .then((response) => response.json())
       .then((response) => JSON.stringify(response, null, 2))
