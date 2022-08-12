@@ -3,10 +3,7 @@ const Main = () => {
     var requestOptions = {
       method: "GET",
     };
-    // const token.tokenId = "496";
-    const baseURL = `https://api.mintkudos.xyz`;
-    const limit = "1000";
-    const fetchURL = `${baseURL}/v1/tokens/496/owners/?limit=${limit}`;
+    const fetchURL = `https://api.mintkudos.xyz/v1/tokens/1655/owners/?limit=1000&offset=10`;
     fetch(fetchURL, requestOptions)
       .then((response) => response.json())
       .then((response) => JSON.stringify(response, null, 2))
