@@ -5,12 +5,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>TheDrop</title>
-        <meta
-          name="description"
-          content="An NFT newsletter for collectors and traders"
-        />
-        <meta name="keywords" content="NFT, tools, resources, news, events" />
+        <title>RW3 Analytics</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main />
