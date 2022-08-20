@@ -3,11 +3,21 @@ const Main = () => {
     var requestOptions = {
       method: "GET",
     };
-    const fetchURL = `https://api.mintkudos.xyz/v1/tokens/1655/owners/?limit=1000&offset=10`;
-    fetch(fetchURL, requestOptions)
+    const fetch1URL = `https://api.mintkudos.xyz/v1/tokens/1655/owners/?limit=1000&offset=0`;
+    const fetch2URL = `https://api.mintkudos.xyz/v1/tokens/1655/owners/?limit=1000&offset=1000`;
+    const responses = await Promise.all([fetch(fetch1URL), fetch(fetch2URL)])
+    
+    const data1 = await responses[0].json()
+    const data2 = await responses[1].json()
+
+    fetch(fetch1URL, requestOptions)
       .then((response) => response.json())
-      .then((response) => JSON.stringify(response, null, 2))
-      .then((result) => console.log(result));
+      .then((data1) => JSON.stringify(data1, null, 2))
+      .then((data1) => console.log(data1));
+    fetch(fetch2URL, requestOptions)
+      .then((response) => response.json())
+      .then((data2) => JSON.stringify(data2, null, 2))
+      .then((data2) => console.log(data2));
   };
 
   return (
